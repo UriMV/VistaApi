@@ -28,7 +28,7 @@ const AutorMaterial = () => {
     const obtenerAutores = async () => {
         setIsLoading(true);
         try {
-            const response = await fetch("http://autorapiweb.somee.com/api/Autor");
+            const response = await fetch("https://autorapiweb.somee.com/api/Autor");
             
             if (!response.ok) {
                 const errorText = await response.text();
@@ -102,7 +102,7 @@ const AutorMaterial = () => {
                 fechaNacimiento: new Date(fechaNacimiento).toISOString()
             };
 
-            const response = await fetch("http://autorapiweb.somee.com/api/Autor", {
+            const response = await fetch("https://autorapiweb.somee.com/api/Autor", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -142,7 +142,7 @@ const AutorMaterial = () => {
 
         setIsLoading(true);
         try {
-            const response = await fetch(`http://autorapiweb.somee.com/api/Autor/${autorID}`);
+            const response = await fetch(`https://autorapiweb.somee.com/api/Autor/${autorID}`);
             
             if (!response.ok) {
                 if (response.status === 404) {
