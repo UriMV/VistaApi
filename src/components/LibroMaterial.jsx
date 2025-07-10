@@ -24,7 +24,7 @@ const LibroMaterial = () => {
 
     const obtenerLibros = async () => {
         try {
-            const response = await fetch("https://localhost:32783/api/LibroMaterial");
+            const response = await fetch("https://libroapi.somee.com/api/LibroMaterial");
             const data = await response.json();
             setLibros(data);
         } catch (error) {
@@ -91,7 +91,7 @@ const LibroMaterial = () => {
                 autorLibro
             };
 
-            const response = await fetch("https://localhost:32783/api/LibroMaterial", {
+            const response = await fetch("https://libroapi.somee.com/api/LibroMaterial", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -129,7 +129,7 @@ const LibroMaterial = () => {
     try {
         console.log(`Consultando libro con ID: ${libroID}`); // Log para depuración
         
-        const response = await fetch(`https://localhost:32783/api/LibroMaterial/${libroID}`);
+        const response = await fetch(`https://libroapi.somee.com/api/LibroMaterial/${libroID}`);
         
         console.log('Respuesta del servidor:', response); // Log para depuración
         
